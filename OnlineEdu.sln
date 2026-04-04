@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37027.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineEdu.API", "OnlineEdu.API\OnlineEdu.API.csproj", "{0B25AC90-44BF-4DFA-B9D2-5A7257955CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineEdu.Entity", "OnlineEdu.Entity\OnlineEdu.Entity.csproj", "{FAA2FB29-27C5-4401-B9A0-FB92958FA006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineEdu.DataAccess", "OnlineEdu.DataAccess\OnlineEdu.DataAccess.csproj", "{22D9F27A-5ADE-4C91-9C27-A0A96734CA25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineEdu.Business", "OnlineEdu.Business\OnlineEdu.Business.csproj", "{97065CF7-40DF-4E02-8935-5E77014CA72C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineEdu.DTO", "OnlineEdu.DTO\OnlineEdu.DTO.csproj", "{82E0456C-0998-453A-A093-A339B3F3BD49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineEdu.WebUI", "OnlineEdu.WebUI\OnlineEdu.WebUI.csproj", "{53D8F98E-4584-41C2-BB68-A0A5968341F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B25AC90-44BF-4DFA-B9D2-5A7257955CCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B25AC90-44BF-4DFA-B9D2-5A7257955CCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B25AC90-44BF-4DFA-B9D2-5A7257955CCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B25AC90-44BF-4DFA-B9D2-5A7257955CCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAA2FB29-27C5-4401-B9A0-FB92958FA006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA2FB29-27C5-4401-B9A0-FB92958FA006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA2FB29-27C5-4401-B9A0-FB92958FA006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA2FB29-27C5-4401-B9A0-FB92958FA006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D9F27A-5ADE-4C91-9C27-A0A96734CA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D9F27A-5ADE-4C91-9C27-A0A96734CA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D9F27A-5ADE-4C91-9C27-A0A96734CA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D9F27A-5ADE-4C91-9C27-A0A96734CA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97065CF7-40DF-4E02-8935-5E77014CA72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97065CF7-40DF-4E02-8935-5E77014CA72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97065CF7-40DF-4E02-8935-5E77014CA72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97065CF7-40DF-4E02-8935-5E77014CA72C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E0456C-0998-453A-A093-A339B3F3BD49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E0456C-0998-453A-A093-A339B3F3BD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E0456C-0998-453A-A093-A339B3F3BD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E0456C-0998-453A-A093-A339B3F3BD49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D8F98E-4584-41C2-BB68-A0A5968341F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D8F98E-4584-41C2-BB68-A0A5968341F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D8F98E-4584-41C2-BB68-A0A5968341F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D8F98E-4584-41C2-BB68-A0A5968341F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A866C65C-4842-4DEB-9F56-2D0A92FFC92B}
+	EndGlobalSection
+EndGlobal
