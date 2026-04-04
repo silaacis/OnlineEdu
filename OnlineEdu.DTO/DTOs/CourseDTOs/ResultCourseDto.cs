@@ -1,12 +1,14 @@
-﻿namespace OnlineEdu.Entity.Entities
+﻿using OnlineEdu.DTO.DTOs.CourseCategoryDTOs;
+
+namespace OnlineEdu.DTO.DTOs.CourseDTOs
 {
-    public class Course
+    public class ResultCourseDto
     {
         public int CourseId { get; set; }
         public string CourseName { get; set; }
         public string ImageUrl { get; set; }
         public int CourseCategoryId { get; set; }
-        public CourseCategory CourseCategory { get; set; }
+        public ResultCourseCategoryDto CourseCategory { get; set; }
         public decimal Price { get; set; }
         public bool IsShown { get; set; }
     }
