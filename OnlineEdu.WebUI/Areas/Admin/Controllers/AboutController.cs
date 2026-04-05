@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineEdu.WebUI.DTOs.AboutDTOs;
 using OnlineEdu.WebUI.Helpers;
-using System.Security.AccessControl;
 
 namespace OnlineEdu.WebUI.Areas.Admin.Controllers
 {

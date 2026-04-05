@@ -6,6 +6,8 @@ using OnlineEdu.DataAccess.Context;
 using OnlineEdu.DataAccess.Repositories;
 using System.Reflection;
 using Scalar.AspNetCore;
+using System.Text.Json.Serialization;
+using OnlineEdu.DataAccess.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +15,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));
+builder.Services.AddScoped<IBlogService, BlogManager>();
+builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+
 
 builder.Services.AddDbContext<OnlineEduContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"));
 });
+
+builder.Services.AddControllers().AddJsonOptions(x =>
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddCors(options =>
 {
