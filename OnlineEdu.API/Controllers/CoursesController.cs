@@ -10,7 +10,7 @@ namespace OnlineEdu.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CoursesController(IGenericService<Course> courseService, IMapper mapper) : ControllerBase
+    public class CoursesController(ICourseService courseService, IMapper mapper) : ControllerBase
     {
         [HttpGet]
         public IActionResult Get()
@@ -47,6 +47,20 @@ namespace OnlineEdu.API.Controllers
             var updatedValue = mapper.Map<Course>(updateCourseDto);
             courseService.TUpdate(updatedValue);
             return Ok("Course has been updated");
+        }
+
+        [HttpGet("ShowOnHome/{id}")]
+        public IActionResult ShowOnHome(int id)
+        {
+            courseService.TShowOnHome(id);
+            return Ok("Course has been shown on home page");
+        }
+
+        [HttpGet("HideOnHome/{id}")]
+        public IActionResult HideOnHome(int id)
+        {
+            courseService.THideOnHome(id);
+            return Ok("Course has been hidden on home page");
         }
     }
 }
