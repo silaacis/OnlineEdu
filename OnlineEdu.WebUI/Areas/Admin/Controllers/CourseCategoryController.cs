@@ -46,5 +46,16 @@ namespace OnlineEdu.WebUI.Areas.Admin.Controllers
             await _client.PutAsJsonAsync("coursecategories", updateCourseCategoryDto);
             return RedirectToAction(nameof(Index));
         }
+        public async Task<IActionResult> ShowOnHome(int id)
+        {
+            await _client.GetAsync("coursecategories/showonhome/" + id);
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> HideOnHome(int id)
+        {
+            await _client.GetAsync("coursecategories/hideonhome/" + id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

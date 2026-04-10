@@ -13,14 +13,14 @@ namespace OnlineEdu.DataAccess.Concrete
 
         public void HideOnHome(int id)
         {
-            var value = context.Courses.Find(id);
+            var value = context.CourseCategories.Find(id);
             value.IsShown = false;
             context.SaveChanges();
         }
 
         public void ShowOnHome(int id)
         {
-            var value = context.Courses.Find(id);
+            var value = context.CourseCategories.Find(id);
             value.IsShown = true;
             context.SaveChanges();
         }

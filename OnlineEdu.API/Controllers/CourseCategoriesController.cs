@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnlineEdu.Business.Abstract;
-using OnlineEdu.DTO.DTOs.ContactDTOs;
 using OnlineEdu.DTO.DTOs.CourseCategoryDTOs;
 using OnlineEdu.Entity.Entities;
 
@@ -10,7 +8,7 @@ namespace OnlineEdu.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CourseCategoriesController(IGenericService<CourseCategory> courseCategoryService, IMapper mapper) : ControllerBase
+    public class CourseCategoriesController(ICourseCategoryService courseCategoryService, IMapper mapper) : ControllerBase
     {
         [HttpGet]
         public IActionResult Get()
@@ -47,6 +45,20 @@ namespace OnlineEdu.API.Controllers
             var updatedValue = mapper.Map<CourseCategory>(updateCourseCategoryDto);
             courseCategoryService.TUpdate(updatedValue);
             return Ok("Course category has been updated");
+        }
+
+        [HttpGet("ShowOnHome/{id}")]
+        public IActionResult ShowOnHome(int id)
+        {
+            courseCategoryService.TShowOnHome(id);
+            return Ok("Course category has been shown on home page");
+        }
+
+        [HttpGet("HideOnHome/{id}")]
+        public IActionResult HideOnHome(int id)
+        {
+            courseCategoryService.THideOnHome(id);
+            return Ok("Course category has been hidden on home page");
         }
     }
 }
