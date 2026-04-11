@@ -12,6 +12,6 @@ namespace OnlineEdu.Business.Abstract
         void TDelete(int id);
         int TCount();
         int TFilteredCount(Expression<Func<T, bool>> predicate);
-        List<T> TGetFİlteredList(Expression<Func<T, bool>> predicate);
+        List<T> TGetFilteredList(Expression<Func<T, bool>> predicate);
     }
 }

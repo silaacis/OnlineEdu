@@ -60,5 +60,12 @@ namespace OnlineEdu.API.Controllers
             courseCategoryService.THideOnHome(id);
             return Ok("Course category has been hidden on home page");
         }
+
+        [HttpGet("GetActiveCategories")]
+        public IActionResult GetActiveCategories()
+        {
+            var values = courseCategoryService.TGetFilteredList(x =>x.IsShown == true);
+            return Ok(values);
+        }
     }
 }

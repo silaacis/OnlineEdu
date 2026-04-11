@@ -62,5 +62,12 @@ namespace OnlineEdu.API.Controllers
             courseService.THideOnHome(id);
             return Ok("Course has been hidden on home page");
         }
+
+        [HttpGet("GetActiveCourses")]
+        public IActionResult GetActiveCourses()
+        {
+            var values = courseService.TGetFilteredList(x => x.IsShown == true);
+            return Ok(values);
+        }
     }
 }

@@ -13,6 +13,6 @@ namespace OnlineEdu.DataAccess.Abstract
         void Delete(int id);
         int Count();
         int FilteredCount(Expression<Func<T, bool>> predicate);
-        List<T> GetFİlteredList(Expression<Func<T, bool>> predicate);
+        List<T> GetFilteredList(Expression<Func<T, bool>> predicate);
     }
 }

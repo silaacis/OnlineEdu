@@ -51,7 +51,7 @@ namespace OnlineEdu.DataAccess.Repositories
             return Table.Find(id);
         }
 
-        public List<T> GetFİlteredList(Expression<Func<T, bool>> predicate)
+        public List<T> GetFilteredList(Expression<Func<T, bool>> predicate)
         {
             return Table.Where(predicate).ToList();
         }

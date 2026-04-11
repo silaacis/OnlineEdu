@@ -36,9 +36,9 @@ namespace OnlineEdu.Business.Concrete
             return repository.GetById(id);
         }
 
-        public List<T> TGetFİlteredList(Expression<Func<T, bool>> predicate)
+        public List<T> TGetFilteredList(Expression<Func<T, bool>> predicate)
         {
-            return repository.GetFİlteredList(predicate);
+            return repository.GetFilteredList(predicate);
         }
         public List<T> TGetList()
         {
